@@ -7,7 +7,7 @@ buildah run $id sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https:/
 buildah run $id dnf check-update
 buildah run $id dnf upgrade -y
 
-buildah run $id dnf install -y java-17-openjdk-devel code maven
+buildah run $id dnf install -y java-17-openjdk-devel code maven vim
 
 buildah run $id dnf autoremove
 buildah run $id dnf clean all
